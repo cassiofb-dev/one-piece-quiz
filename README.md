@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://site.alura.com.br/">
-    <img src="https://i.imgur.com/g3wWePB.png" alt="Alura Logo">
+    <img src="https://i.imgur.com/cwZddVU.png" alt="Alura Logo">
   </a>
 </p>
 
