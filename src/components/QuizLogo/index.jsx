@@ -2,9 +2,10 @@
 
 import styled from 'styled-components';
 
+// eslint-disable-next-line react/prop-types
 function Logo({ className }) {
   return (
-    <img className={className} src="https://upload.wikimedia.org/wikipedia/en/2/2c/One_Piece_Logo.svg" alt="one piece logo"/>
+    <img className={className} src="https://upload.wikimedia.org/wikipedia/en/2/2c/One_Piece_Logo.svg" alt="one piece logo" />
   );
 }
 
