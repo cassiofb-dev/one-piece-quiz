@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
-  border: 1px solid ${({ theme: { colors } }) => colors.primary};
-  background-color: ${({ theme: { colors } }) => colors.mainBg};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.mainBg};
   border-radius: 4px;
   overflow: hidden;
 
@@ -46,6 +46,36 @@ Widget.Content = styled.div`
   ul {
     list-style: none;
     padding: 0;
+  }
+`;
+
+Widget.Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 10px;
+  input {
+    padding: 12px 0 12px 10px;
+    border: 1px solid;
+    border-color: ${({ theme }) => theme.colors.contrastText};
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.contrastText};
+    border-radius: 10px;
+    width: 100%;
+  }
+  input::placeholder {
+    color: ${({ theme }) => theme.colors.contrastText};
+  }
+  button {
+    width: 100%;
+    margin: 20px 0;
+    padding: 8px 15px;
+    border:0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.contrastText};
   }
 `;
 

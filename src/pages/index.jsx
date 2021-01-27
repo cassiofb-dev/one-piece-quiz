@@ -42,19 +42,17 @@ export default function Home() {
         </Widget>
 
         <Widget>
-          <Widget.Content>
+          <Widget.Form>
             <form onSubmit={handleSubmit}>
               <input
                 onChange={handleChange}
                 placeholder="Digite seu nome"
               />
-              <br />
-              <br />
               <button type="submit" disabled={name.length === 0}>
-                {`username: ${name}`}
+                Jogar
               </button>
             </form>
-          </Widget.Content>
+          </Widget.Form>
         </Widget>
         <Footer />
       </QuizContainer>
