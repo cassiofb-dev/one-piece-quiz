@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-
-import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import QuizBackground from '../components/QuizBackground';
@@ -11,22 +8,9 @@ import Widget from '../components/Widget';
 import Footer from '../components/Footer';
 import db from '../db.json';
 
-export default function Home() {
+export default function Quiz() {
   const router = useRouter();
-  const [name, setName] = useState('');
-
-  function handleSubmit(infosDoEvento) {
-    infosDoEvento.preventDefault();
-    router.push(`/quiz?name=${name}`);
-    console.log('Fazendo uma submissão por meio do react');
-  }
-
-  function handleChange(infosDoEvento) {
-    console.log(infosDoEvento.target.value);
-    // State
-    // name = infosDoEvento.target.value;
-    setName(infosDoEvento.target.value);
-  }
+  const { name } = router.query;
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -43,17 +27,7 @@ export default function Home() {
 
         <Widget>
           <Widget.Content>
-            <form onSubmit={handleSubmit}>
-              <input
-                onChange={handleChange}
-                placeholder="Digite seu nome"
-              />
-              <br />
-              <br />
-              <button type="submit" disabled={name.length === 0}>
-                {`username: ${name}`}
-              </button>
-            </form>
+            {`Seja bem vindo ao quiz ${name}`}
           </Widget.Content>
         </Widget>
         <Footer />
