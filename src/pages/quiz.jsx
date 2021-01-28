@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 import QuizBackground from '../components/QuizBackground';
 import QuestionWidget from '../components/QuestionWidget';
@@ -51,7 +52,12 @@ export default function QuizPage() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-        <QuizLogo />
+        <Link href="/">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a>
+            <QuizLogo />
+          </a>
+        </Link>
         {screenState === screenStates.QUIZ && (
           <QuestionWidget
             question={question}
