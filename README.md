@@ -23,23 +23,42 @@ npx create-next-app --example with-styled-components
 ```
 📦src
  ┣ 📂components
+ ┃ ┣ 📂AlternativesForm
+ ┃ ┃ ┗ 📜index.jsx
+ ┃ ┣ 📂Button
+ ┃ ┃ ┗ 📜index.jsx
  ┃ ┣ 📂Footer
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.jsx
  ┃ ┣ 📂GitHubCorner
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.jsx
+ ┃ ┣ 📂Input
+ ┃ ┃ ┗ 📜index.jsx
+ ┃ ┣ 📂LoadingWidget
+ ┃ ┃ ┗ 📜index.jsx
+ ┃ ┣ 📂QuestionWidget
+ ┃ ┃ ┗ 📜index.jsx
  ┃ ┣ 📂QuizBackground
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.jsx
  ┃ ┣ 📂QuizContainer
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.jsx
  ┃ ┣ 📂QuizLogo
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.jsx
+ ┃ ┣ 📂ResultWidget
+ ┃ ┃ ┗ 📜index.jsx
  ┃ ┣ 📂SEO
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.jsx
  ┃ ┗ 📂Widget
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.jsx
  ┣ 📂pages
- ┃ ┣ 📜index.js
- ┃ ┣ 📜_app.js
- ┃ ┗ 📜_document.js
+ ┃ ┣ 📂api
+ ┃ ┃ ┗ 📜db.js
+ ┃ ┣ 📜index.jsx
+ ┃ ┣ 📜quiz.jsx
+ ┃ ┣ 📜_app.jsx
+ ┃ ┗ 📜_document.jsx
  ┗ 📜db.json
 ```
+
+## Créditos
+- [GIFs](https://tenor.com/)
+- [Música de Fundo](https://www.youtube.com/watch?v=3wd3j9-piek)

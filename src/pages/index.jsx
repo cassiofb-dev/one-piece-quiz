@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -9,23 +7,27 @@ import GitHubCorner from '../components/GitHubCorner';
 import QuizLogo from '../components/QuizLogo';
 import Widget from '../components/Widget';
 import Footer from '../components/Footer';
+import Button from '../components/Button';
+import Input from '../components/Input';
 import db from '../db.json';
 
 export default function Home() {
   const router = useRouter();
   const [name, setName] = useState('');
 
-  function handleSubmit(infosDoEvento) {
-    infosDoEvento.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const audio = document.getElementById('bgm');
+    audio.loop = true;
+    audio.load();
+    audio.play();
+
     router.push(`/quiz?name=${name}`);
-    console.log('Fazendo uma submissão por meio do react');
   }
 
-  function handleChange(infosDoEvento) {
-    console.log(infosDoEvento.target.value);
-    // State
-    // name = infosDoEvento.target.value;
-    setName(infosDoEvento.target.value);
+  function handleChange(event) {
+    setName(event.target.value);
   }
 
   return (
@@ -42,17 +44,17 @@ export default function Home() {
         </Widget>
 
         <Widget>
-          <Widget.Form>
-            <form onSubmit={handleSubmit}>
-              <input
-                onChange={handleChange}
-                placeholder="Digite seu nome"
-              />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-              </button>
-            </form>
-          </Widget.Form>
+          <form onSubmit={handleSubmit}>
+            <Input
+              name="nomeDoUsuario"
+              onChange={handleChange}
+              placeholder="Digite seu nome"
+              value={name}
+            />
+            <Button type="submit" disabled={name.length === 0}>
+              Jogar
+            </Button>
+          </form>
         </Widget>
         <Footer />
       </QuizContainer>

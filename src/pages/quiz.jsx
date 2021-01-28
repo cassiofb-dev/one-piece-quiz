@@ -1,38 +1,71 @@
-import { useRouter } from 'next/router';
+/* eslint-disable react/prop-types */
+
+import { useState, useEffect } from 'react';
 
 import QuizBackground from '../components/QuizBackground';
+import QuestionWidget from '../components/QuestionWidget';
 import QuizContainer from '../components/QuizContainer';
-import GitHubCorner from '../components/GitHubCorner';
+import LoadingWidget from '../components/LoadingWidget';
+import ResultWidget from '../components/ResultWidget';
 import QuizLogo from '../components/QuizLogo';
-import Widget from '../components/Widget';
-import Footer from '../components/Footer';
+
 import db from '../db.json';
 
-export default function Quiz() {
-  const router = useRouter();
-  const { name } = router.query;
+const screenStates = {
+  QUIZ: 'QUIZ',
+  LOADING: 'LOADING',
+  RESULT: 'RESULT',
+};
+
+export default function QuizPage() {
+  const [screenState, setScreenState] = useState(screenStates.LOADING);
+  const [results, setResults] = useState([]);
+  const totalQuestions = db.questions.length;
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const questionIndex = currentQuestion;
+  const question = db.questions[questionIndex];
+
+  function addResult(result) {
+    // results.push(result);
+    setResults([
+      ...results,
+      result,
+    ]);
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setScreenState(screenStates.QUIZ);
+    }, 1 * 1000);
+  }, []);
+
+  function handleSubmitQuiz() {
+    const nextQuestion = questionIndex + 1;
+    if (nextQuestion < totalQuestions) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setScreenState(screenStates.RESULT);
+    }
+  }
 
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
-          <Widget.Header>
-            <h1>{db.title}</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>{db.description}</p>
-          </Widget.Content>
-        </Widget>
+        {screenState === screenStates.QUIZ && (
+          <QuestionWidget
+            question={question}
+            questionIndex={questionIndex}
+            totalQuestions={totalQuestions}
+            onSubmit={handleSubmitQuiz}
+            addResult={addResult}
+          />
+        )}
 
-        <Widget>
-          <Widget.Content>
-            {`Seja bem vindo ao quiz ${name}`}
-          </Widget.Content>
-        </Widget>
-        <Footer />
+        {screenState === screenStates.LOADING && <LoadingWidget />}
+
+        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
-      <GitHubCorner projectUrl={db.gitURL} />
     </QuizBackground>
   );
 }

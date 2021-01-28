@@ -34,6 +34,10 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
       </Head>
       <SEO />
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <audio id="bgm">
+        <source src="/over-the-top.ogg" type="audio/ogg" />
+      </audio>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}

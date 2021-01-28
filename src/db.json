@@ -4,25 +4,126 @@
   "description": "Confira o quanto você sabe sobre o futuro rei dos piratas",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "image": "https://media1.tenor.com/images/e63be7381f9b85cf0147c45fcafdbce2/tenor.gif?itemid=9781941",
+      "title": "Qual o nome do personagem no background?",
+      "description": "Muito fácil",
+      "answer": 1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Portugal de Ace",
+        "Portgas D. Ace",
+        "Monkey D. Luffy",
+        "Portugas De Ace"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://media1.tenor.com/images/f29ada842a5e93441af5693ca7dad141/tenor.gif?itemid=4553005",
+      "title": "De quem é o golpe Shakushi",
+      "description": "Nem tão fácil, o gif é uma dica",
+      "answer": 2,
+      "alternatives": [
+         "Jango",
+         "Don Krieg",
+         "Kuro",
+         "Morgan"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/8b590b31eb39c6c578ef6c64a427c55b/tenor.gif?itemid=5654212",
+      "title": "Quem comeu a Horo-Horo no mi?",
+      "description": "Fácil, gif é a resposta kk",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Perona",
+         "Absalona",
+         "Kuzan",
+         "Corazon"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/f90cda04e45cf125fe82fb24a96c5345/tenor.gif?itemid=15762186",
+      "title": "Com que golpe o Luffy derrotou Crocodile?",
+      "description": "Média, sem dicas XD",
+      "answer": 1,
+      "alternatives": [
+         "Gomu Gomu no Gatling Gun",
+         "Gomu Gomu no Storm",
+         "Gomu Gomu no Bazooka",
+         "Gomu Gomu no Pistol"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/c0b9b34d91cdc202362bb6e4b6a0f6c4/tenor.gif?itemid=8040613",
+      "title": "De que Raça é o Blue Gilly?",
+      "description": "Dica no gif kkkk",
+      "answer": 3,
+      "alternatives": [
+         "Gigante",
+         "Braços Longos",
+         "Mink",
+         "Pernas Longas"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/bd05f55685fdfab3f0ec19955d3da14f/tenor.gif?itemid=13405960",
+      "title": "Qual desses personagens não é membro do antigo Tom's Workers?",
+      "description": "Eu não lembrava...",
+      "answer": 2,
+      "alternatives": [
+         "Tom",
+         "Franky",
+         "Jerry",
+         "Kokoro"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/536c1a8b1a37a53617fd5508fa736c30/tenor.gif?itemid=14665792",
+      "title": "Qual é a data de aniversário de Sanji?",
+      "description": "Difícil",
+      "answer": 3,
+      "alternatives": [
+         "01 de Maio",
+         "02 de Maio",
+         "03 de Fevereiro",
+         "02 de Março"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/d5441ed8e148fc90f46d53aa90ce7364/tenor.gif?itemid=17592459",
+      "title": "Qual dos membros do chapéu de palha foi mandado pelo Kuma para o reino Torino?",
+      "description": "Dificuldade média",
+      "answer": 0,
+      "alternatives": [
+         "Chopper",
+         "Nami",
+         "Jinbe",
+         "Sanji"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/0aa891518feebf3f77b0de93e90d1f08/tenor.gif?itemid=18051433",
+      "title": "Que pirata tem a alcunha de 'cabelo molhado'?",
+      "description": "Difícil, gif é a dica",
+      "answer": 1,
+      "alternatives": [
+         "Coribou",
+         "Caribou",
+         "Coribo",
+         "Wadatsumi"
+      ]
+    },{
+      "image": "https://media.tenor.com/images/9e71341fd927acbe572bdfc857a0d9d0/tenor.gif",
+      "title": "Qual desses personagens não é sacerdote de Enel",
+      "description": "Difícil e sem dica",
+      "answer": 3,
+      "alternatives": [
+         "Gedatsu",
+         "Shura",
+         "Satori",
+         "Calgara"
+      ]
+    },{
+      "image": "https://media1.tenor.com/images/92067c51447cdcba4a3c1f632d2d61cb/tenor.gif?itemid=18293976",
+      "title": "Ohara ficava localizada em que mar?",
+      "description": "Difícil e sem dica",
+      "answer": 1,
+      "alternatives": [
+         "North Blue",
+         "West Blue",
+         "South Blue",
+         "East Blue"
       ]
     }
   ],
@@ -40,5 +141,5 @@
     },
     "borderRadius": "4px"
   },
-  "gitURL": "https://github.com/cassiofb-dev"
+  "gitURL": "https://github.com/cassiofb-dev/one-piece-quiz"
 }
